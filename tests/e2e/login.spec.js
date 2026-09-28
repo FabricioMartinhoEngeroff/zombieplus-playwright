@@ -22,7 +22,7 @@ test("deve logar como administrador", async () => {
 test("não deve logar com senha incorreta", async () => {
   await loginPage.visit();
   await loginPage.submitLoginForm("admin@zombieplus.com", "wrongpassword");
-  await toast.haveText("Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.");
+  await toast.haveText("Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.");
 });
 
 test("não deve logar quando o email é inválido", async () => {

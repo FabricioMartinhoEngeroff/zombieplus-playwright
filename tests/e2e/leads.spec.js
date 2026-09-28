@@ -1,4 +1,6 @@
 const { test } = require("@playwright/test");
+const { faker } = require("@faker-js/faker");
+
 const { LandingPage } = require("../pages/LandingPage");
 const { Toast } = require("../pages/components");
 
@@ -11,10 +13,14 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("deve cadastrar um lead na fila de espera", async () => {
+  const leadName = faker.person.fullName();
+  const leadEmail = faker.internet.email();
   await landingPage.visit();
   await landingPage.openLeadModal();
-  await landingPage.submitLeadForm("Fernando Papito", "papito@yahoo.com");
-  await toast.haveText("Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!");
+  await landingPage.submitLeadForm(leadName, leadEmail);
+  await toast.haveText(
+    "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!",
+  );
 });
 
 test("não deve cadastrar com e-mail incorreto", async () => {
