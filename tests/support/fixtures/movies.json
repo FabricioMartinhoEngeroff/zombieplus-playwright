@@ -1,0 +1,66 @@
+{
+  "create": {
+    "title": "Extermínio",
+    "overview": "Um vírus transforma as pessoas em raivosos assassinos enquanto um grupo tenta sobreviver na Inglaterra devastada.",
+    "company": "Fox Searchlight Pictures",
+    "release_year": 2002,
+    "featured": true,
+    "cover": "/caminho/para/exterminio.png"
+  },
+  "madrugada_dos_mortos": {
+    "title": "Madrugada dos Mortos",
+    "overview": "Um grupo de sobreviventes busca abrigo em um shopping center após uma onda de zumbis tomar as cidades.",
+    "company": "Universal Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "/caminho/para/madrugada_dos_mortos.png"
+  },
+  "resident_evil": {
+    "title": "Resident Evil",
+    "overview": "Uma agente especial desperta sem memória e precisa enfrentar horrores biológicos criados por uma corporação secreta.",
+    "company": "Screen Gems",
+    "release_year": 2002,
+    "featured": true,
+    "cover": "/caminho/para/resident_evil.png"
+  },
+  "zumilandia": {
+    "title": "Zumbilândia",
+    "overview": "Em um mundo dominado por zumbis, quatro sobreviventes improváveis formam um grupo para atravessar os EUA.",
+    "company": "Columbia Pictures",
+    "release_year": 2009,
+    "featured": true,
+    "cover": "/caminho/para/zumilandia.png"
+  },
+  "guerra_mundial_z": {
+    "title": "Guerra Mundial Z",
+    "overview": "Um ex-agente da ONU viaja pelo mundo em busca da origem de uma pandemia que transforma humanos em zumbis.",
+    "company": "Paramount Pictures",
+    "release_year": 2013,
+    "featured": false,
+    "cover": "/caminho/para/guerra_mundial_z.png"
+  },
+  "trem_para_busan": {
+    "title": "Trem para Busan",
+    "overview": "Um pai e sua filha ficam presos em um trem enquanto uma epidemia zumbi se alastra pela Coreia do Sul.",
+    "company": "Next Entertainment World",
+    "release_year": 2016,
+    "featured": true,
+    "cover": "/caminho/para/trem_para_busan.png"
+  },
+  "dia_dos_mortos": {
+    "title": "O Dia dos Mortos",
+    "overview": "Soldados e cientistas tentam conviver em um bunker subterrâneo enquanto zumbis dominam a superfície.",
+    "company": "United Film Distribution",
+    "release_year": 1985,
+    "featured": false,
+    "cover": "/caminho/para/dia_dos_mortos.png"
+  },
+  "noite_dos_mortos_vivos": {
+    "title": "A Noite dos Mortos-Vivos",
+    "overview": "Um grupo se refugia em uma casa isolada tentando sobreviver a ataques de mortos que voltaram à vida.",
+    "company": "Walter Reade Organization",
+    "release_year": 1968,
+    "featured": true,
+    "cover": "/caminho/para/noite_dos_mortos_vivos.png"
+  }
+}
