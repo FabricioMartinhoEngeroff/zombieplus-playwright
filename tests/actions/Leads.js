@@ -1,6 +1,6 @@
 const { expect } = require("@playwright/test");
 
-class LandingPage {
+class Leads {
   constructor(page) {
     this.page = page;
   }
@@ -12,7 +12,7 @@ class LandingPage {
   async openLeadModal() {
     await this.page.getByRole("button", { name: /Aperte o play/ }).click();
     await expect(
-      this.page.getByTestId("modal").getByRole("heading")
+      this.page.getByTestId("modal").getByRole("heading"),
     ).toHaveText("Fila de espera");
   }
 
@@ -26,7 +26,8 @@ class LandingPage {
   }
 
   async toastHaveText() {
-    const message = 'Oops! Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.';
+    const message =
+      "Oops! Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.";
     const toast = this.page.locator(".toast");
     await expect(toast).toHaveText(message);
     await expect(toast).not.toBeVisible({ timeout: 5000 });
@@ -38,4 +39,4 @@ class LandingPage {
   }
 }
 
-module.exports = { LandingPage };
+module.exports = { Leads };

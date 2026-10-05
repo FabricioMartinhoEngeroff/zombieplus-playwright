@@ -1,19 +1,19 @@
 const { test } = require("../support");
-const { LoginPage } = require("../pages/LoginPage");
-const { MoviesPage } = require("../pages/MoviesPage");
-
+const { Login } = require("../actions/Login");
+const { Movies } = require("../actions/Movies");
 
 test("deve logar como administrador", async (page) => {
-
   await page.login.visit();
   await page.login.submitLoginForm("admin@zombieplus.com", "pwd123");
-  await page.movies.isLoggedIn();
+  await page.login.isLoggedIn();
 });
 
 test("não deve logar com senha incorreta", async (page) => {
   await page.login.visit();
   await page.login.submitLoginForm("admin@zombieplus.com", "wrongpassword");
-  await page.toast.haveText("Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.");
+  await page.toast.haveText(
+    "Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.",
+  );
 });
 
 test("não deve logar quando o email é inválido", async (page) => {
