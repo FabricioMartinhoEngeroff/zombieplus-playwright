@@ -5,10 +5,10 @@ class Login {
     this.page = page;
   }
 
-  async do(email, password) {
+  async do(email, password, username) {
     await this.visit();
     await this.submit(email, password);
-    await this.isLoggedIn();
+    await this.isLoggedIn(username);
   }
 
   async visit() {
@@ -29,8 +29,8 @@ class Login {
   }
 
   async isLoggedIn() {
-    await this.page.waitForLoadState("networkidle");
-    await expect(this.page).toHaveURL(/.*admin\/movies/);
+   const loggedUser = this.page.locator(".logged-user");
+    await expect(loggedUser).toHaveText("Olá, Admin");
   }
 }
 

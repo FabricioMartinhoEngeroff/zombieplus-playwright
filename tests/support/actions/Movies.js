@@ -1,6 +1,6 @@
 const { expect } = require("@playwright/test");
 
-const data = require("../support/fixtures/movies.json");
+const data = require("../fixtures/movies.json");
 
 class Movies {
   constructor(page) {
@@ -35,6 +35,12 @@ class Movies {
       .locator(".react-select__option")
       .filter({ hasText: release_year })
       .click();
+
+    await this.page
+      .locator("input[name=cover]")
+      .setInputFiles("tests/support/fixtures" + movie.cover);
+
+      await this.page.locator(".featured .react-switch").click();
 
     await this.submitForm();
   }

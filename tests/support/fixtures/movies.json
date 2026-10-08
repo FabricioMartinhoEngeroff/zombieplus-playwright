@@ -5,7 +5,7 @@
     "company": "Fox Searchlight Pictures",
     "release_year": 2002,
     "featured": true,
-    "cover": "/caminho/para/exterminio.png"
+    "cover": "tests/support/fixtures/covers/movies/exterminio.jpg"
   },
   "madrugada_dos_mortos": {
     "title": "Madrugada dos Mortos",
@@ -13,7 +13,7 @@
     "company": "Universal Pictures",
     "release_year": 2004,
     "featured": false,
-    "cover": "/caminho/para/madrugada_dos_mortos.png"
+    "cover": "tests/support/fixtures/covers/movies/madrugada.jpg"
   },
   "resident_evil": {
     "title": "Resident Evil",
@@ -21,7 +21,7 @@
     "company": "Screen Gems",
     "release_year": 2002,
     "featured": true,
-    "cover": "/caminho/para/resident_evil.png"
+    "cover": "tests/support/fixtures/covers/movies/resident-evil.jpg"
   },
   "zumilandia": {
     "title": "Zumbilândia",
@@ -29,7 +29,7 @@
     "company": "Columbia Pictures",
     "release_year": 2009,
     "featured": true,
-    "cover": "/caminho/para/zumilandia.png"
+    "cover": "tests/support/fixtures/covers/movies/mostor-vivos-2.jpg"
   },
   "guerra_mundial_z": {
     "title": "Guerra Mundial Z",
@@ -37,7 +37,7 @@
     "company": "Paramount Pictures",
     "release_year": 2013,
     "featured": false,
-    "cover": "/caminho/para/guerra_mundial_z.png"
+    "cover": "tests/support/fixtures/covers/movies/opz.jpg"
   },
   "trem_para_busan": {
     "title": "Trem para Busan",
@@ -45,7 +45,7 @@
     "company": "Next Entertainment World",
     "release_year": 2016,
     "featured": true,
-    "cover": "/caminho/para/trem_para_busan.png"
+    "cover": "tests/support/fixtures/covers/movies/mortos-vivos.jpg"
   },
   "dia_dos_mortos": {
     "title": "O Dia dos Mortos",
@@ -53,7 +53,7 @@
     "company": "United Film Distribution",
     "release_year": 1985,
     "featured": false,
-    "cover": "/caminho/para/dia_dos_mortos.png"
+    "cover": "tests/support/fixtures/covers/movies/dead-snow.jpg"
   },
   "noite_dos_mortos_vivos": {
     "title": "A Noite dos Mortos-Vivos",
@@ -61,6 +61,6 @@
     "company": "Walter Reade Organization",
     "release_year": 1968,
     "featured": true,
-    "cover": "/caminho/para/noite_dos_mortos_vivos.png"
+    "cover": "tests/support/fixtures/covers/movies/dead-snow.jpg"
   }
 }

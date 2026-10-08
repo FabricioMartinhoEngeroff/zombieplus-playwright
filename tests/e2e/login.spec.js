@@ -1,11 +1,11 @@
 const { test } = require("../support");
-const { Login } = require("../actions/Login");
-const { Movies } = require("../actions/Movies");
+const { Login } = require("../support/actions/Login");
+const { Movies } = require("../support/actions/Movies");
 
 test("deve logar como administrador", async (page) => {
   await page.login.visit();
   await page.login.submitLoginForm("admin@zombieplus.com", "pwd123");
-  await page.login.isLoggedIn();
+  await page.login.isLoggedIn("Admin");
 });
 
 test("não deve logar com senha incorreta", async (page) => {
