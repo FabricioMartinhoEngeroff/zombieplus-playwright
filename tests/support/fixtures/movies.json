@@ -5,23 +5,23 @@
     "company": "Fox Searchlight Pictures",
     "release_year": 2002,
     "featured": true,
-    "cover": "tests/support/fixtures/covers/movies/exterminio.jpg"
+    "cover": "/covers/movies/exterminio.jpg"
   },
-  "madrugada_dos_mortos": {
+  "duplicate": {
     "title": "Madrugada dos Mortos",
     "overview": "Um grupo de sobreviventes busca abrigo em um shopping center após uma onda de zumbis tomar as cidades.",
     "company": "Universal Pictures",
     "release_year": 2004,
     "featured": false,
-    "cover": "tests/support/fixtures/covers/movies/madrugada.jpg"
+    "cover": "/covers/movies/madrugada-dos-mortos.jpg"
   },
-  "resident_evil": {
+  "to_remove": {
     "title": "Resident Evil",
     "overview": "Uma agente especial desperta sem memória e precisa enfrentar horrores biológicos criados por uma corporação secreta.",
     "company": "Screen Gems",
     "release_year": 2002,
     "featured": true,
-    "cover": "tests/support/fixtures/covers/movies/resident-evil.jpg"
+    "cover": "/covers/movies/resident-evil.jpg"
   },
   "zumilandia": {
     "title": "Zumbilândia",

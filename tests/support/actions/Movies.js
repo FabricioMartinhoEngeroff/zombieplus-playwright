@@ -49,6 +49,12 @@ class Movies {
     const alert = this.page.locator(".alert");
     await expect(alert).toHaveText(target);
   }
+
+  async remove(title) {
+  await this.page.getByRole('row', { name: title }).getByRole('button').click()
+
+  await this.page.click('.confirm-removal')
+}
 }
 
 module.exports = { Movies };

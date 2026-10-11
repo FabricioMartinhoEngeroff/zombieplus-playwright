@@ -7,9 +7,9 @@ test("deve cadastrar um lead na fila de espera", async (page) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm(leadName, leadEmail);
-  await page.toast.containText(
-    "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!",
-  );
+  await page.popup.haveText(
+  "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!",
+);
 });
 
 test("não deve cadastrar quando o email já existe", async ({
@@ -31,8 +31,8 @@ test("não deve cadastrar quando o email já existe", async ({
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm(leadName, leadEmail);
 
-  await page.toast.containText(
-    "O endereço de e-mail fornecido já está registrado em nossa fila de espera.",
+  await page.popup.haveText(
+    "Verificamos que o endereço de e-mail fornecido já consta em nossa lista de espera. Isso significa que você está um passo mais perto de aproveitar nossos serviços.",
   );
 });
 
@@ -40,26 +40,26 @@ test("não deve cadastrar com e-mail incorreto", async (page) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("Fernando Papito", "emailinvalido");
-  await page.leads.alertHaveText("Email incorreto");
+  await page.popup.haveText("Email incorreto");
 });
 
 test("não deve cadastrar quando o nome não é preenchido", async (page) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("", "fa.engeroff@gmail.com");
-  await page.leads.alertHaveText("Campo obrigatório");
+  await page.popup.haveText("Campo obrigatório");
 });
 
 test("não deve cadastrar quando o email não é preenchido", async (page) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("Fabricio3", "");
-  await page.leads.alertHaveText("Campo obrigatório");
+  await page.popup.haveText("Campo obrigatório");
 });
 
 test("não deve cadastrar quando nenhum campo é preenchido", async (page) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("", "");
-  await page.leads.alertHaveText(["Campo obrigatório", "Campo obrigatório"]);
+  await page.popup.haveText(["Campo obrigatório", "Campo obrigatório"]);
 });
