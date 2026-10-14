@@ -13,7 +13,37 @@
     "company": "Universal Pictures",
     "release_year": 2004,
     "featured": false,
-    "cover": "/covers/movies/madrugada-dos-mortos.jpg"
+    "cover": "/covers/movies/madrugada.jpg"
+  },
+  "search": {
+    "input": "zumbi",
+    "outputs": ["Zumbilândia", "Orgulho e Preconceito e Zumbis", "Meu Namorado é um Zumbi"],
+    "data": [
+      {
+        "title": "Zumbilândia",
+        "overview": "Em um mundo dominado por zumbis, quatro sobreviventes improváveis formam um grupo para atravessar os EUA.",
+        "company": "Columbia Pictures",
+        "release_year": 2009,
+        "featured": true,
+        "cover": "/covers/movies/mostor-vivos-2.jpg"
+      },
+      {
+        "title": "Orgulho e Preconceito e Zumbis",
+        "overview": "Elizabeth Bennet e Sr. Darcy unem forças para combater uma praga de zumbis.",
+        "company": "Screen Gems",
+        "release_year": 2016,
+        "featured": false,
+        "cover": "/covers/movies/opz.jpg"
+      },
+      {
+        "title": "Meu Namorado é um Zumbi",
+        "overview": "Em um mundo pós-apocalíptico, uma jovem se apaixona por um zumbi.",
+        "company": "Summit Entertainment",
+        "release_year": 2013,
+        "featured": false,
+        "cover": "/covers/movies/mortos-vivos.jpg"
+      }
+    ]
   },
   "to_remove": {
     "title": "Resident Evil",
@@ -22,45 +52,5 @@
     "release_year": 2002,
     "featured": true,
     "cover": "/covers/movies/resident-evil.jpg"
-  },
-  "zumilandia": {
-    "title": "Zumbilândia",
-    "overview": "Em um mundo dominado por zumbis, quatro sobreviventes improváveis formam um grupo para atravessar os EUA.",
-    "company": "Columbia Pictures",
-    "release_year": 2009,
-    "featured": true,
-    "cover": "tests/support/fixtures/covers/movies/mostor-vivos-2.jpg"
-  },
-  "guerra_mundial_z": {
-    "title": "Guerra Mundial Z",
-    "overview": "Um ex-agente da ONU viaja pelo mundo em busca da origem de uma pandemia que transforma humanos em zumbis.",
-    "company": "Paramount Pictures",
-    "release_year": 2013,
-    "featured": false,
-    "cover": "tests/support/fixtures/covers/movies/opz.jpg"
-  },
-  "trem_para_busan": {
-    "title": "Trem para Busan",
-    "overview": "Um pai e sua filha ficam presos em um trem enquanto uma epidemia zumbi se alastra pela Coreia do Sul.",
-    "company": "Next Entertainment World",
-    "release_year": 2016,
-    "featured": true,
-    "cover": "tests/support/fixtures/covers/movies/mortos-vivos.jpg"
-  },
-  "dia_dos_mortos": {
-    "title": "O Dia dos Mortos",
-    "overview": "Soldados e cientistas tentam conviver em um bunker subterrâneo enquanto zumbis dominam a superfície.",
-    "company": "United Film Distribution",
-    "release_year": 1985,
-    "featured": false,
-    "cover": "tests/support/fixtures/covers/movies/dead-snow.jpg"
-  },
-  "noite_dos_mortos_vivos": {
-    "title": "A Noite dos Mortos-Vivos",
-    "overview": "Um grupo se refugia em uma casa isolada tentando sobreviver a ataques de mortos que voltaram à vida.",
-    "company": "Walter Reade Organization",
-    "release_year": 1968,
-    "featured": true,
-    "cover": "tests/support/fixtures/covers/movies/dead-snow.jpg"
   }
 }

@@ -40,9 +40,15 @@ class Movies {
       .locator("input[name=cover]")
       .setInputFiles("tests/support/fixtures" + movie.cover);
 
-      await this.page.locator(".featured .react-switch").click();
+    await this.page.locator(".featured .react-switch").click();
 
     await this.submitForm();
+  }
+
+  async tableHave(content) {
+    const rows = this.page.getByRole("row");
+
+    await expect(rows).toContainText(content);
   }
 
   async alertHaveText(target) {
@@ -51,10 +57,19 @@ class Movies {
   }
 
   async remove(title) {
-  await this.page.getByRole('row', { name: title }).getByRole('button').click()
+    await this.page
+      .getByRole("row", { name: title })
+      .getByRole("button")
+      .click();
 
-  await this.page.click('.confirm-removal')
-}
+    await this.page.click(".confirm-removal");
+  }
+
+  async search(target) {
+    await this.page.getByPlaceholder("Busque pelo nome").fill(target);
+
+    await this.page.click(".actions button");
+  }
 }
 
 module.exports = { Movies };
