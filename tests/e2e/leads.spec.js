@@ -7,7 +7,7 @@ test.beforeAll(async () => {
 });
 
 
-test("deve cadastrar um lead na fila de espera", async (page) => {
+test("deve cadastrar um lead na fila de espera", async ({ page }) => {
   const leadName = faker.person.fullName();
   const leadEmail = faker.internet.email();
   await page.leads.visit();
@@ -42,28 +42,28 @@ test("não deve cadastrar quando o email já existe", async ({
   );
 });
 
-test("não deve cadastrar com e-mail incorreto", async (page) => {
+test("não deve cadastrar com e-mail incorreto", async ({ page }) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("Fernando Papito", "emailinvalido");
   await page.popup.haveText("Email incorreto");
 });
 
-test("não deve cadastrar quando o nome não é preenchido", async (page) => {
+test("não deve cadastrar quando o nome não é preenchido", async ({ page }) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("", "fa.engeroff@gmail.com");
   await page.popup.haveText("Campo obrigatório");
 });
 
-test("não deve cadastrar quando o email não é preenchido", async (page) => {
+test("não deve cadastrar quando o email não é preenchido", async ({ page }) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("Fabricio3", "");
   await page.popup.haveText("Campo obrigatório");
 });
 
-test("não deve cadastrar quando nenhum campo é preenchido", async (page) => {
+test("não deve cadastrar quando nenhum campo é preenchido", async ({ page }) => {
   await page.leads.visit();
   await page.leads.openLeadModal();
   await page.leads.submitLeadForm("", "");

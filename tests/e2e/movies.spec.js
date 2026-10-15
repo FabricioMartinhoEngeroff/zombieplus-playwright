@@ -7,7 +7,7 @@ test.beforeAll(async () => {
   await executeSQL("DELETE FROM movies;");
 });
 
-test("deve poder cadastrar um novo Filme", async (page) => {
+test("deve poder cadastrar um novo Filme", async ({ page }) => {
   const movie = data.create;
 
   await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';`);
@@ -29,7 +29,7 @@ test("deve poder remover um filme", async ({ page, request }) => {
   await page.popup.haveText("Filme removido com sucesso.");
 });
 
-test("não deve cadastrar quando o titulo é duplicado", async (page, request) => {
+test("não deve cadastrar quando o titulo é duplicado", async ({ page, request }) => {
   const movie = data.duplicate;
 
   await request.api.postMovie(movie);

@@ -1,56 +1,61 @@
 {
-  "create": {
-    "title": "Extermínio",
-    "overview": "Um vírus transforma as pessoas em raivosos assassinos enquanto um grupo tenta sobreviver na Inglaterra devastada.",
-    "company": "Fox Searchlight Pictures",
-    "release_year": 2002,
-    "featured": true,
-    "cover": "/covers/movies/exterminio.jpg"
-  },
-  "duplicate": {
-    "title": "Madrugada dos Mortos",
-    "overview": "Um grupo de sobreviventes busca abrigo em um shopping center após uma onda de zumbis tomar as cidades.",
-    "company": "Universal Pictures",
-    "release_year": 2004,
-    "featured": false,
-    "cover": "/covers/movies/madrugada.jpg"
-  },
-  "search": {
-    "input": "zumbi",
-    "outputs": ["Zumbilândia", "Orgulho e Preconceito e Zumbis", "Meu Namorado é um Zumbi"],
-    "data": [
-      {
-        "title": "Zumbilândia",
-        "overview": "Em um mundo dominado por zumbis, quatro sobreviventes improváveis formam um grupo para atravessar os EUA.",
-        "company": "Columbia Pictures",
-        "release_year": 2009,
-        "featured": true,
-        "cover": "/covers/movies/mostor-vivos-2.jpg"
-      },
-      {
-        "title": "Orgulho e Preconceito e Zumbis",
-        "overview": "Elizabeth Bennet e Sr. Darcy unem forças para combater uma praga de zumbis.",
-        "company": "Screen Gems",
-        "release_year": 2016,
-        "featured": false,
-        "cover": "/covers/movies/opz.jpg"
-      },
-      {
-        "title": "Meu Namorado é um Zumbi",
-        "overview": "Em um mundo pós-apocalíptico, uma jovem se apaixona por um zumbi.",
-        "company": "Summit Entertainment",
-        "release_year": 2013,
-        "featured": false,
-        "cover": "/covers/movies/mortos-vivos.jpg"
-      }
-    ]
-  },
-  "to_remove": {
-    "title": "Resident Evil",
-    "overview": "Uma agente especial desperta sem memória e precisa enfrentar horrores biológicos criados por uma corporação secreta.",
-    "company": "Screen Gems",
-    "release_year": 2002,
-    "featured": true,
-    "cover": "/covers/movies/resident-evil.jpg"
+    "create": {
+      "title": "Guerra Mundial Z",
+      "overview": "Um ex-investigador da ONU é chamado para investigar a propagação de um vírus mortal que transforma as vítimas em zumbis, ameaçando dizimar a população mundial.",
+      "company": "Paramount Pictures",
+      "release_year": 2013,
+      "featured": true,
+      "cover": "/covers/movies/wwz.png"
+    },
+    "duplicate": {
+      "title": "Resident Evil: O Hospedeiro",
+      "overview": "Alice se junta a sobreviventes para enfrentar a Corporação Umbrella e os zumbis mutantes criados por ela.",
+      "company": "Columbia Pictures",
+      "release_year": 2002,
+      "featured": false,
+      "cover": "/covers/movies/resident-evil.jpg"
+    },
+    "to_remove": {
+      "title": "A Noite dos Mortos-Vivos",
+      "overview": "Um grupo de pessoas fica preso em uma casa enquanto zumbis canibais famintos cercam o local.",
+      "company": "Universal Pictures",
+      "release_year": 1968,
+      "featured": false,
+      "cover": "/covers/movies/mortos-vivos.jpg"
+    },
+    "search": {
+      "input": "zumbi",
+      "outputs": [
+        "Zumbilândia",
+        "Orgulho e Preconceito e Zumbis",
+        "Meu Namorado é um Zumbi"
+      ],
+      "data": [
+        {
+          "title": "Zumbilândia",
+          "overview": "Um grupo improvável de sobreviventes navega por um mundo cheio de zumbis, tentando encontrar um lugar seguro.",
+          "company": "Sony Pictures",
+          "release_year": 2009,
+          "featured": true,
+          "cover": "/caminho/para/zumbilandia.png"
+        },
+        {
+          "title": "Orgulho e Preconceito e Zumbis",
+          "overview": "Elizabeth Bennet e Sr. Darcy unem forças para combater uma praga de zumbis que assola a Inglaterra.",
+          "company": "Universal Pictures",
+          "release_year": 2016,
+          "featured": false,
+          "cover": "/caminho/para/orgulho_e_preconceito_e_zumbis.png"
+        },
+        {
+          "title": "Meu Namorado é um Zumbi",
+          "overview": "Em um mundo pós-apocalíptico, uma jovem se apaixona por um zumbi que ainda preserva algumas características humanas.",
+          "company": "Fox Entertainment",
+          "release_year": 2013,
+          "featured": false,
+          "cover": "/caminho/para/meu_namorado_e_um_zumbi.png"
+        }
+      ]
+    }
   }
-}
+  
