@@ -21,6 +21,10 @@ class Leads {
     await this.page.getByPlaceholder("Informe seu email").fill(email);
     await this.page.getByTestId("modal").getByText("Quero entrar na fila!").click();
   }
+
+  async alertHaveText(target) {
+    await expect(this.page.locator(".alert")).toHaveText(target);
+  }
 }
 
 module.exports = { Leads };

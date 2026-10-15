@@ -6,10 +6,9 @@ class Popup {
   }
 
   async haveText(message) {
-    const popup = this.page.locator(".toast");
-    await expect(popup).toContainText(message);
-    await expect(popup).not.toBeVisible({ timeout: 10000 });
+    const popup = this.page.locator(".swal2-html-container");
+    await expect(popup).toHaveText(message);
   }
 }
 
-module.exports = { Popup};
+module.exports = { Popup };

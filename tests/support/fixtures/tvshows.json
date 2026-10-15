@@ -5,8 +5,8 @@
         "company": "Fox Entertainment",
         "release_year": 2010,
         "featured": true,
-        "season": 10,
-        "cover": "/covers/series/twd.png"
+        "seasons": 10,
+        "cover": "/covers/tvshows/twd.png"
     },
     "duplicate": {
         "title": "Fear the Walking Dead",
@@ -14,8 +14,8 @@
         "company": "Fox Entertainment",
         "release_year": 2015,
         "featured": false,
-        "season": 5,
-        "cover": "/covers/series/ftwd.png"
+        "seasons": 5,
+        "cover": "/covers/tvshows/ftwd.png"
     },
     "to_remove": {
         "title": "Reality Z",
@@ -23,8 +23,8 @@
         "company": "Netflix",
         "release_year": 2015,
         "featured": false,
-        "season": 1,
-        "cover": "/covers/series/404.png"
+        "seasons": 1,
+        "cover": "/covers/tvshows/404.png"
     },
     "search": {
         "input": "zombie",
@@ -40,7 +40,7 @@
                 "company": "Universal Picturess",
                 "release_year": 2014,
                 "featured": false,
-                "season": 3,
+                "seasons": 3,
                 "cover": "/caminho/para/404.png"
             },
             {
@@ -49,7 +49,7 @@
                 "company": "Netflix",
                 "release_year": 2019,
                 "featured": false,
-                "season": 4,
+                "seasons": 4,
                 "cover": "/caminho/para/404.png"
             },
             {
@@ -58,7 +58,7 @@
                 "company": "Netflix",
                 "release_year": 2017,
                 "featured": false,
-                "season": 5,
+                "seasons": 5,
                 "cover": "/caminho/para/404.pngs"
             }
         ]

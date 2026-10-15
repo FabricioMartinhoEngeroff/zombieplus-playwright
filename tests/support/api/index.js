@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { expect } = require("@playwright/test");
 
-export class Api {
+class Api {
   constructor(request) {
     this.baseApi = process.env.BASE_API;
     this.request = request;
@@ -18,7 +18,7 @@ export class Api {
 
     expect(response.ok()).toBeTruthy();
     const body = JSON.parse(await response.text());
-    this.token = body.token;
+    this.token = `Bearer ${body.token}`;
   }
 
   async getCompanyIdByName(companyName) {
@@ -61,3 +61,5 @@ export class Api {
     expect(response.ok()).toBeTruthy();
   }
 }
+
+module.exports = { Api };

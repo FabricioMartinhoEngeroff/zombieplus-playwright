@@ -7,7 +7,7 @@ class Login {
 
   async do(email, password, username) {
     await this.visit();
-    await this.submit(email, password);
+    await this.submitLoginForm(email, password);
     await this.isLoggedIn(username);
   }
 
@@ -24,13 +24,13 @@ class Login {
   }
 
   async alertHaveText(target) {
-    const alert = this.page.locator("span.email-alert, span.password-alert");
+    const alert = this.page.locator("span.alert");
     await expect(alert).toHaveText(target);
   }
 
-  async isLoggedIn() {
-   const loggedUser = this.page.locator(".logged-user");
-    await expect(loggedUser).toHaveText("Olá, Admin");
+  async isLoggedIn(username) {
+    const loggedUser = this.page.locator(".logged-user");
+    await expect(loggedUser).toHaveText(`Olá, ${username}`);
   }
 }
 

@@ -16,7 +16,7 @@ test("deve poder cadastrar um novo Filme", async ({ page }) => {
 
   await page.movies.create(movie);
   await page.popup.haveText(
-    "O título 'Resident Evil: O Hospedeiro' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.",
+    `O filme '${movie.title}' foi adicionado ao catálogo.`,
   );
 });
 
@@ -36,16 +36,18 @@ test("não deve cadastrar quando o titulo é duplicado", async ({ page, request 
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.movies.create(movie);
-  await page.popup.haveText("Cadastro realizado com sucesso!");
+  await page.popup.haveText(
+    `O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`,
+  );
 });
 
 test("não deve cadastrar quando os campos obrigatórios estiverem vazios", async ({
   page,
 }) => {
-  await page.login.submitLoginForm("admin@zombieplus.com", "pwd123", "Admin");
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
 
   await page.movies.goForm();
-  await page.movies.submit();
+  await page.movies.submitForm();
   await page.movies.alertHaveText([
     "Campo obrigatório",
     "Campo obrigatório",
@@ -57,9 +59,9 @@ test("não deve cadastrar quando os campos obrigatórios estiverem vazios", asyn
 test("deve realizar busca pelo termo zumbi", async ({ page, request }) => {
   const movies = data.search;
 
-  movies.data.forEach(async (m) => {
+  for (const m of movies.data) {
     await request.api.postMovie(m);
-  });
+  }
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.movies.search(movies.input);
