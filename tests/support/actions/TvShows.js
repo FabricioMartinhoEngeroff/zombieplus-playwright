@@ -27,13 +27,17 @@ class TvShows {
     await this.page.getByLabel("Titulo da série").fill(tvshow.title);
     await this.page.getByLabel("Sinopse").fill(tvshow.overview);
 
-    await this.page.locator("#select_company_id .react-select__dropdown-indicator").click();
+    await this.page
+      .locator("#select_company_id .react-select__dropdown-indicator")
+      .click();
     await this.page
       .locator(".react-select__option")
       .filter({ hasText: tvshow.company })
       .click();
 
-    await this.page.locator("#select_year .react-select__dropdown-indicator").click();
+    await this.page
+      .locator("#select_year .react-select__dropdown-indicator")
+      .click();
     await this.page
       .locator(".react-select__option")
       .filter({ hasText: String(tvshow.release_year) })
@@ -54,6 +58,25 @@ class TvShows {
 
   async alertHaveText(target) {
     await expect(this.page.locator(".alert")).toHaveText(target);
+  }
+
+  async search(target) {
+    await this.page.getByPlaceholder("Busque pelo nome").fill(target);
+    await this.page.click(".actions button");
+  }
+
+  async tableHave(content) {
+    const rows = this.page.getByRole("row");
+    await expect(rows).toContainText(content);
+  }
+
+  async remove(title) {
+    await this.page
+      .getByRole("row", { name: title })
+      .getByRole("button")
+      .click();
+
+    await this.page.click(".confirm-removal");
   }
 }
 

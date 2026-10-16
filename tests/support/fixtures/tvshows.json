@@ -37,11 +37,11 @@
             {
                 "title": "Zombie Nation",
                 "overview": "Um grupo de sobreviventes tenta transportar o único sobrevivente conhecido de uma praga zumbi pelo país para o último laboratório funcional.",
-                "company": "Universal Picturess",
+                "company": "Universal Pictures",
                 "release_year": 2014,
                 "featured": false,
                 "seasons": 3,
-                "cover": "/caminho/para/404.png"
+                "cover": "/covers/tvshows/404.png"
             },
             {
                 "title": "Black Zombie",
@@ -50,7 +50,7 @@
                 "release_year": 2019,
                 "featured": false,
                 "seasons": 4,
-                "cover": "/caminho/para/404.png"
+                "cover": "/covers/tvshows/404.png"
             },
             {
                 "title": "Santa Clarita Zombie",
@@ -59,7 +59,7 @@
                 "release_year": 2017,
                 "featured": false,
                 "seasons": 5,
-                "cover": "/caminho/para/404.pngs"
+                "cover": "/covers/tvshows/404.png"
             }
         ]
     }
